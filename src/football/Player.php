@@ -50,13 +50,10 @@ class Player
     }
 
     /**
-     * @return int|string
+     * @return int|null
      */
-    public function getShirtNumber(): int|string
+    public function getShirtNumber(): int|null
     {
-        if (is_null($this->shirtNumber)) {
-            return "Not defined";
-        }
         return $this->shirtNumber;
     }
 

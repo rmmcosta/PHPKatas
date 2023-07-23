@@ -2,11 +2,12 @@
 
 namespace subclasses\football;
 
-abstract class Team
+class Team
 {
     private readonly Country $country;
     private int $numberOfAssociates;
     private string $stadiumName;
+    private array $playerList;
 
     /**
      * @param Country $country
@@ -18,6 +19,7 @@ abstract class Team
         $this->country = $country;
         $this->numberOfAssociates = $numberOfAssociates;
         $this->stadiumName = $stadiumName;
+        $this->playerList = [];
     }
 
     /**
@@ -58,6 +60,22 @@ abstract class Team
     public function getCountry(): Country
     {
         return $this->country;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPlayerList(): array
+    {
+        return $this->playerList;
+    }
+
+    /**
+     * @param Player $player
+     */
+    public function addPlayer(Player $player): void
+    {
+        $this->playerList[] = $player;
     }
 
 
