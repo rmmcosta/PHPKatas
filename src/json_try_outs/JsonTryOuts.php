@@ -15,4 +15,9 @@ class JsonTryOuts
         var_dump(json_encode($object));
         return json_encode($object);
     }
+
+    public static function jsonSerializeWithoutCertainThings(object $object): string
+    {
+        return "";
+    }
 }
